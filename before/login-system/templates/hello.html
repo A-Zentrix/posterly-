@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hello Page</title>
+</head>
+
+<body>
+    <h1 id="greeting">Hello, World!</h1>
+    <p id="info"></p>
+
+    <script>
+        const name = localStorage.getItem("name");
+        const email = localStorage.getItem("email");
+
+        if (name && email) {
+            document.getElementById("greeting").textContent = `Hello, ${name}!`;
+            document.getElementById("info").textContent = `Email: ${email}`;
+        } else {
+            document.getElementById("greeting").textContent = "Unauthorized Access!";
+        }
+    </script>
+</body>
+
+</html>
